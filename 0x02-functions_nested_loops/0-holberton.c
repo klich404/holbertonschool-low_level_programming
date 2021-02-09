@@ -2,6 +2,7 @@
 
 /**
  * main - print "Holberton"
+ * Return: 0
  */
 
 int main(void)
