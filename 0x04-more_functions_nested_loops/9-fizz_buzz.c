@@ -23,9 +23,9 @@ int main(void)
 		else
 			printf("%d", x);
 
-		putchar (32);
+		printf(" ");
 	}
 
-	putchar (10);
+	printf("\n");
 	return (0);
 }
