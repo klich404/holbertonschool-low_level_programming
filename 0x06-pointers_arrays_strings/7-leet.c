@@ -14,11 +14,11 @@ char *leet(char *str)
 	orig = "aAeEoOtTlL";
 	repl = "4433007711";
 
-	for (x = 0;str[x] != 00; x++)
+	for (x = 0; str[x] != 00; x++)
 	{
 		for (y = 0; orig[y] != 00; y++)
 		{
-			if(str[x] == orig[y])
+			if (str[x] == orig[y])
 			{
 				str[x] = repl[y];
 			}
