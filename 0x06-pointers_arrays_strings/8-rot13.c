@@ -15,7 +15,8 @@ char *rot13(char *str)
 		for (; (str[x] >= 65 && str[x] <= 90) ||
 			     (str[x] >= 97 && str[x] <= 122); x++)
 		{
-			if ((str[x] >= 65 && str[x] <= 77) || (str[x] >= 97 && str[x] <= 109))
+			if ((str[x] >= 65 && str[x] <= 77) ||
+			    (str[x] >= 97 && str[x] <= 109))
 			{
 				str[x] += 13;
 			}
