@@ -12,8 +12,7 @@ char *rot13(char *str)
 
 	for (x = 0; str[x] != 00; x++)
 	{
-		for (; (str[x] >= 65 && str[x] <= 90) ||
-			     (str[x] >= 97 && str[x] <= 122); x++)
+		while ((str[x] >= 65 && str[x] <= 90) || (str[x] >= 97 && str[x] <= 122))
 		{
 			if ((str[x] >= 65 && str[x] <= 77) || (str[x] >= 97 && str[x] <= 109))
 			{
@@ -23,6 +22,7 @@ char *rot13(char *str)
 			{
 				str[x] -= 13;
 			}
+			x++;
 		}
 	}
 	return (str);
