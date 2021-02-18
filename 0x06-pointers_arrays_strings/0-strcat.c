@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
- *
+ * _strcat - concatenates two strings
+ * @dest: is a pointer
+ * @src: is a pointer
+ * Return: dest
  */
 
 char *_strcat(char *dest, char *src)
