@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
- *
+ * _strchr - locates a character in a string
+ * @s: is a pointer
+ * @c: is a char
+ * Return: s or NULL
  */
 
 char *_strchr(char *s, char c)
@@ -15,6 +18,6 @@ char *_strchr(char *s, char c)
 	}
 	else
 	{
-		return 0;
+		return (0);
 	}
 }
