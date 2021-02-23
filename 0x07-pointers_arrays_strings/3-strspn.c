@@ -11,6 +11,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int x, y, z;
 
+	z = 0;
 	for (x = 0; s[x] != 00 && s[x] != 32; x++)
 	{
 		for (y = 0; accept[y] != 00; y++)
