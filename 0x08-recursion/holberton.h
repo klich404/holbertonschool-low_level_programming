@@ -9,4 +9,6 @@ int revision(int x, int y);
 int is_prime_number(int n);
 int cal(int x, int y);
 int is_palindrome(char *s);
+int length(char *s, int x);
+int palindrome(char *s, int len, int y);
 int wildcmp(char *s1, char *s2);
