@@ -29,10 +29,10 @@ int cal(int x, int y)
 
 	else
 	{
-		if(x % y == 0)
+		if (x % y == 0)
 			return (0);
 
 		else
-			return(cal(x, y - 1));
+			return (cal(x, y - 1));
 	}
 }
