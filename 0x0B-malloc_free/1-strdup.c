@@ -2,7 +2,9 @@
 #include <stdlib.h>
 
 /**
- *
+ * _strdup - returns a pointer to a newly allocated space in memory
+ * @str: is a pointer
+ * Return: z or NULL
  */
 
 char *_strdup(char *str)
@@ -24,5 +26,6 @@ char *_strdup(char *str)
 	for (y = 0; y <= x; y++)
 		z[y] = str[y];
 
+	z[y] = 00;
 	return (z);
 }
