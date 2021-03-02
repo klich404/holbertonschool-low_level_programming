@@ -13,6 +13,9 @@ char *str_concat(char *s1, char *s2)
 	int x, y, len;
 	char *cat;
 
+	if (s1 == 00 || s2 == 00)
+		return (0);
+
 	for (x = 0; s1[x] != 00; x++)
 		;
 
@@ -20,10 +23,6 @@ char *str_concat(char *s1, char *s2)
 		;
 
 	len = x + y;
-
-	if (s1 == 00 || s2 == 00)
-		return (0);
-
 	cat = malloc(len * sizeof(char) + 1);
 
 	if (cat == 00)
