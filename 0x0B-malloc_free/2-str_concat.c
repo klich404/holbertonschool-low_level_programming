@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 
 	len = x + y;
 
-	if (s1 == 00 && s2 == 00)
+	if (s1 == 00 || s2 == 00)
 		return (0);
 
 	cat = malloc(len * sizeof(char) + 1);
