@@ -3,7 +3,7 @@
 
 /**
  * main - adds positive numbers
- * @argc: argument count 
+ * @argc: argument count
  * @argv: argument vector
  * Return: 0 or 1
  */
