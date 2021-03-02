@@ -31,10 +31,10 @@ char *str_concat(char *s1, char *s2)
 	if (cat == 00)
 		return (0);
 
-	for (z = 0; s1[z] != 00; z++)
+	for (z = 0; z < x; z++)
 		cat[z] = s1[z];
 
-	for (z = 0; s2[z] != 00; z++)
+	for (z = 0; z < y; z++)
 		cat[x + z] = s2[z];
 
 	cat[x + y] = 00;
