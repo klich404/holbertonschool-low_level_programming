@@ -24,8 +24,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (y = 0; owner[y] != 00; y++)
 		;
 
-	if (age == 0)
-		return (0);
 	n = malloc(sizeof(char) * x + 1);
 	if (n == 0)
 	{
@@ -34,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	o = malloc(sizeof(char) * y + 1);
-	if (n == 0)
+	if (o == 0)
 	{
 		free(n);
 		free(DJ_ango);
