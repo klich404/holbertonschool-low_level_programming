@@ -15,7 +15,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int x, y, z;
 	char *n, *o;
 
-	DJ_ango = malloc(sizeof(dog_t));
+	DJ_ango = malloc(sizeof(struct dog));
 	if (DJ_ango == 0)
 		return (0);
 
