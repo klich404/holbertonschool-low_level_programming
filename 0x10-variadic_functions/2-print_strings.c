@@ -3,7 +3,9 @@
 #include <stdarg.h>
 
 /**
- *
+ * print_strings - prints strings
+ * @separator: is a character pointer
+ * @n: is an unsigned int
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -12,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *print;
 	va_list parameters;
 
-	va_start (parameters, n);
+	va_start(parameters, n);
 	for (x = 0; x < n; x++)
 	{
 		print = va_arg(parameters, char *);
