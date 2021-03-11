@@ -12,10 +12,10 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int x;
 	int sumar, sum;
 	va_list parameters;
-	va_start(parameters, n);
 
+	va_start(parameters, n);
 	if (n == 0)
-		return 0;
+		return (0);
 
 	sum = 0;
 	for (x = 0; x < n; x++)
