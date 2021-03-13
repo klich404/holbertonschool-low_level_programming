@@ -23,9 +23,9 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 
-	while (format[x] != 00 && format != 0)
+	while (format != NULL && format[x] != '\0')
 	{
-		while (sea_for[y].ident != 0)
+		while (sea_for[y].ident != NULL)
 		{
 			if (sea_for[y].ident[0] == format[x])
 			{
