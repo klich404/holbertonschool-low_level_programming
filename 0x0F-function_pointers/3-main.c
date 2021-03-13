@@ -22,6 +22,12 @@ int main(int argc, char *argv[])
 
 	xd = get_op_func(argv[2]);
 
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	if (xd == 0)
 	{
 		printf("Error\n");
