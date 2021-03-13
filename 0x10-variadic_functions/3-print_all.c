@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 
-	while (format[x] != 00)
+	while (format[x] != 00 && format != 0)
 	{
 		while (sea_for[y].ident != 0)
 		{
