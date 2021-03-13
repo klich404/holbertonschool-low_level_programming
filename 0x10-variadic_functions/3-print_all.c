@@ -75,10 +75,12 @@ void floatt(va_list print)
  */
 void string(va_list print)
 {
-	if (print == 0)
+	char *printt = va_arg(print, char *);
+
+	if (printt == 0)
 	{
 		printf("(nil)");
 		return;
 	}
-	printf("%s", va_arg(print, char*));
+	printf("%s", printt);
 }
