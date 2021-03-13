@@ -9,8 +9,9 @@
  * Return: 0A
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
+	int r;
 	int (*xd)(int, int);
 
 	if (argc != 4)
@@ -27,7 +28,8 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	printf("%d\n", xd(atoi(argv[1]), atoi(argv[3])));
+	r = xd(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", r);
 
 	return (0);
 }
