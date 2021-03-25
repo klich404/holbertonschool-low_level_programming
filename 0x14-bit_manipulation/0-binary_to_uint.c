@@ -11,6 +11,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int x, y, len, dec = 0;
 	int z;
 
+	if (b == NULL)
+		return (0);
+
 	for (len = 0; b[len] != 00; len++)
 		;
 	len = (len - 1);
@@ -20,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 		y = 1;
 		z = (b[x] - '0');
 
-		if ((z > 1) || (z < 0) || (b == NULL))
+		if ((z > 1) || (z < 0))
 			return (0);
 
 		y = y << (len - x);
