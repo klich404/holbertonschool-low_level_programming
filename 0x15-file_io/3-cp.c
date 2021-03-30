@@ -52,7 +52,7 @@ int main(int argc, char **argv)
  * error98 - if file_from does not exist, or if you can not read it
  * @file: the first argument passed to your program
  */
-void error98(*file)
+void error98(char *file)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 	exit(98);
@@ -62,7 +62,7 @@ void error98(*file)
  * error99 - if you can not create or if write to file_to fails
  *@file: the second argument passed to your program
  */
-void error99(*file)
+void error99(char *file)
 {
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 	exit(99);
@@ -72,7 +72,7 @@ void error99(*file)
  * error100 - if you can not close a file descriptor
  * @file: the value of the file descriptor
  */
-void error100(*file)
+void error100(char *file)
 {
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 	exit(100);
