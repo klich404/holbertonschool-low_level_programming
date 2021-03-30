@@ -9,7 +9,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd1, fd2, rd, wr;
+	int fd1, fd2, rd, wr, cs1, cs2;
 	char *file_from, *file_to, buffer[1024];
 
 	if (argc != 3)
@@ -49,17 +49,17 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	close(fd1);
-	if (close(fd1) == -1)
+	cs1 = close(fd1);
+	if (cs1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 
-	close(fd2);
-	if (close(fd2) == -1)
+	cs2 = close(fd2);
+	if (cs2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 
