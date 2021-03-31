@@ -9,8 +9,8 @@
 
 int main(int argc, char **argv)
 {
-	int fd1, fd2, rd, wr;
-	char *file_from, *file_to, buffer[1024];
+	int fd1 = 0, fd2 = 0, rd = 0, wr = 0;
+	char *file_from, *file_to, buffer[BUFSIZ];
 
 	if (argc != 3)
 	{
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	if (fd2 == -1)
 		error99(file_to);
 
-	rd = read(fd1, buffer, 1024);
+	rd = read(fd1, buffer, BUFSIZ);
 	if (rd == -1)
 		error98(file_from);
 
@@ -50,9 +50,9 @@ int main(int argc, char **argv)
  * error98 - if file_from does not exist, or if you can not read it
  * @file: the first argument passed to your program
  */
-void error98(char *file)
+void error98(char *file_from)
 {
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
 }
 
@@ -60,9 +60,9 @@ void error98(char *file)
  * error99 - if you can not create or if write to file_to fails
  *@file: the second argument passed to your program
  */
-void error99(char *file)
+void error99(char *file_to)
 {
-	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 	exit(99);
 }
 
