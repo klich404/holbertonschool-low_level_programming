@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 
 /**
  * error98 - if file_from does not exist, or if you can not read it
- * @file: the first argument passed to your program
+ * @file_from: the first argument passed to your program
  */
 void error98(char *file_from)
 {
@@ -58,7 +58,7 @@ void error98(char *file_from)
 
 /**
  * error99 - if you can not create or if write to file_to fails
- *@file: the second argument passed to your program
+ *@file_to: the second argument passed to your program
  */
 void error99(char *file_to)
 {
