@@ -8,18 +8,22 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t x;
+	int check;
 
 	for (x = 0; h != NULL; x++)
 	{
-		if (h->n != 00)
+		if (h->prev != NULL && check == 0)
 		{
-			printf("%d\n", h->n);
-			h = h->next;
+			h = h->prev;
+			continue;
 		}
-		else
+		else if (h->prev == NULL)
 		{
-			h = h->next;
+			check = 1;
+			x = 0;
 		}
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 	return (x);
 }
